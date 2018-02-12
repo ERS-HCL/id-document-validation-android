@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Document Validation</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_crop">Crop</string>
+    <string name="title_crop_activity">Crop Image</string>
+    <string name="title_pick_image">Pick Image</string>
+</resources>

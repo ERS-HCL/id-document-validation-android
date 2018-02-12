@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mobilevision.docvalidation.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:padding="5dp"
+        android:gravity="center_horizontal"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/layout_criteria"
+        android:layout_below="@+id/tv_status"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:alignItems="stretch"
+        app:alignContent="stretch" >
+
+        <CheckBox
+            android:id="@+id/chk_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Face Detection"
+            android:checked="true"
+            android:padding="5dp"/>
+
+        <CheckBox
+            android:id="@+id/chk_resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Resolution"
+            android:padding="5dp"
+            android:enabled="false"/>
+        <CheckBox
+            android:id="@+id/chk_dimension"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Resolution"
+            android:padding="5dp"
+            android:enabled="false"/>
+        <CheckBox
+            android:id="@+id/chk_glare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detect Glare"
+            android:padding="5dp"
+            android:enabled="false"/>
+        <CheckBox
+            android:id="@+id/chk_mrz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detect MRZ"
+            android:padding="5dp"
+            android:enabled="false"/>
+        <CheckBox
+            android:id="@+id/chk_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detect Barcode"
+            android:padding="5dp"
+            android:enabled="false"/>
+        <CheckBox
+            android:id="@+id/chk_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detect QR Code"
+            android:padding="5dp"
+            android:enabled="false"/>
+    </com.google.android.flexbox.FlexboxLayout>
+    <RelativeLayout
+        android:padding="12dp"
+        android:layout_below="@+id/layout_criteria"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_above="@+id/btn_choose_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <Button
+        android:id="@+id/btn_choose_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Image"
+        android:layout_above="@+id/btn_detect_faces"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_detect_faces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Validate Document"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
+</RelativeLayout>
